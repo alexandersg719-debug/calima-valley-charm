@@ -33,7 +33,7 @@ function HomePage() {
       <main>
         <section className="mx-auto max-w-6xl px-5 pt-8 sm:px-8">
           <div className="clay relative overflow-hidden rounded-2xl bg-lake">
-            <img src={hero.url} alt="Vista del Lago Calima rodeado de montañas verdes" className="kenburns absolute inset-0 h-full w-full object-cover" />
+            <img src={hero.url} alt="Vista del Lago Calima rodeado de montañas verdes" width={1600} height={900} className="kenburns absolute inset-0 h-full w-full object-cover" />
             <div className="absolute inset-0 bg-foreground/45" />
             <div className="relative flex min-h-[440px] flex-col justify-end p-7 sm:min-h-[520px] sm:p-12">
               <span className="clay-sm mb-4 w-fit rounded-full bg-background/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-foreground">Portal cultural</span>
@@ -66,7 +66,7 @@ function HomePage() {
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             {categories.map((category) => (
               <Link key={category.to} to={category.to} className={`clay-sm group block overflow-hidden rounded-lg p-3 transition-transform hover:-translate-y-1 ${category.tone}`}>
-                <div className="overflow-hidden rounded-md"><img src={category.image} alt={category.title} className="aspect-square w-full object-cover transition-transform duration-700 group-hover:scale-105" /></div>
+                <div className="overflow-hidden rounded-md"><img src={category.image} alt={category.title} loading="lazy" width={800} height={800} className="aspect-square w-full object-cover transition-transform duration-700 group-hover:scale-105" /></div>
                 <div className="px-2 pb-2 pt-4">
                   <span className="text-[11px] font-semibold uppercase tracking-[0.18em]">{category.eyebrow}</span>
                   <h3 className="mt-1 font-display text-2xl font-semibold text-foreground">{category.title}</h3>

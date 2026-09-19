@@ -43,7 +43,7 @@ export function CategoryPage({ eyebrow, title, intro, tone, items }: CategoryPag
           {items.map((item, index) => (
             <article key={item.title} className="group">
               <div className="clay-sm overflow-hidden rounded-lg bg-secondary">
-                <img src={item.image} alt={item.alt} className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
+                <img src={item.image} alt={item.alt} loading="lazy" width={1024} height={768} className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
               </div>
               <div className="pt-5">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">0{index + 1}</p>
