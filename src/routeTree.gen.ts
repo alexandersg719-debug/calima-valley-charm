@@ -10,33 +10,69 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ActividadesAcuaticasRouteImport } from './routes/actividades-acuaticas'
+import { Route as LugaresParaVisitarRouteImport } from './routes/lugares-para-visitar'
+import { Route as RestaurantesRouteImport } from './routes/restaurantes'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ActividadesAcuaticasRoute = ActividadesAcuaticasRouteImport.update({
+  id: '/actividades-acuaticas',
+  path: '/actividades-acuaticas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LugaresParaVisitarRoute = LugaresParaVisitarRouteImport.update({
+  id: '/lugares-para-visitar',
+  path: '/lugares-para-visitar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RestaurantesRoute = RestaurantesRouteImport.update({
+  id: '/restaurantes',
+  path: '/restaurantes',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/actividades-acuaticas': typeof ActividadesAcuaticasRoute
+  '/lugares-para-visitar': typeof LugaresParaVisitarRoute
+  '/restaurantes': typeof RestaurantesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/actividades-acuaticas': typeof ActividadesAcuaticasRoute
+  '/lugares-para-visitar': typeof LugaresParaVisitarRoute
+  '/restaurantes': typeof RestaurantesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/actividades-acuaticas': typeof ActividadesAcuaticasRoute
+  '/lugares-para-visitar': typeof LugaresParaVisitarRoute
+  '/restaurantes': typeof RestaurantesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    '/' | '/actividades-acuaticas' | '/lugares-para-visitar' | '/restaurantes'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/actividades-acuaticas' | '/lugares-para-visitar' | '/restaurantes'
+  id:
+    | '__root__'
+    | '/'
+    | '/actividades-acuaticas'
+    | '/lugares-para-visitar'
+    | '/restaurantes'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ActividadesAcuaticasRoute: typeof ActividadesAcuaticasRoute
+  LugaresParaVisitarRoute: typeof LugaresParaVisitarRoute
+  RestaurantesRoute: typeof RestaurantesRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +84,35 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/actividades-acuaticas': {
+      id: '/actividades-acuaticas'
+      path: '/actividades-acuaticas'
+      fullPath: '/actividades-acuaticas'
+      preLoaderRoute: typeof ActividadesAcuaticasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lugares-para-visitar': {
+      id: '/lugares-para-visitar'
+      path: '/lugares-para-visitar'
+      fullPath: '/lugares-para-visitar'
+      preLoaderRoute: typeof LugaresParaVisitarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/restaurantes': {
+      id: '/restaurantes'
+      path: '/restaurantes'
+      fullPath: '/restaurantes'
+      preLoaderRoute: typeof RestaurantesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ActividadesAcuaticasRoute: ActividadesAcuaticasRoute,
+  LugaresParaVisitarRoute: LugaresParaVisitarRoute,
+  RestaurantesRoute: RestaurantesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
