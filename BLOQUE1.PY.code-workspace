@@ -1,0 +1,53 @@
+{
+	"folders": [
+		{
+			"path": "../../../Desktop/UTEDE/BLOQUE1.PY/BLOQUE1.PY"
+		},
+		{
+			"path": "../../../Desktop/UTEDE/BLOQUE2.PY/BLOQUE2.PY"
+		},
+		{
+			"path": "../../../Desktop/UTEDE/BLOQUE3.PY"
+		},
+		{
+			"path": "../../../Desktop/UTEDE/ACTIVIDAD1"
+		},
+		{
+			"path": "../../../Desktop/UTEDE/FUNCIONES.PY"
+		},
+		{
+			"path": "../../../Desktop/UTEDE/CREARFUNCIONES.PY"
+		},
+		{
+			"path": "../../../Desktop/UTEDE/CLASESDEPHYTON.PY"
+		},
+		{
+			"path": "../../../Desktop/UTEDE/TALLERCODIGOS.PY"
+		},
+		{
+			"path": "../../../Desktop/UTEDE/TALLERINTERFACES.PY"
+		},
+		{
+			"path": "../../../Desktop/ECOCALIMA-DEVDOCS-HUB"
+		},
+		{
+			"path": "../../../Desktop/UTEDE/SABADO C3"
+		},
+		{
+			"path": "../../../Desktop/UTEDE/LOGIN.HTML"
+		},
+		{
+			"path": "../../../Desktop/UTEDE/CALCULADORA"
+		}
+	],
+	"settings": {
+		"python-envs.pythonProjects": [
+			{
+				"path": "actividad1.py",
+				"envManager": "ms-python.python:venv",
+				"packageManager": "ms-python.python:pip",
+				"workspace": "BLOQUE1.PY"
+			}
+		]
+	}
+}
